@@ -1,0 +1,23 @@
+<phpunit bootstrap="./Bootstrap.php"
+    backupGlobals="false"
+    colors="true"
+    forceCoversAnnotation="true"
+    processIsolation="false"
+    stopOnFailure="false"
+    strict="true"
+    syntaxCheck="true"
+>
+    <testsuites>
+        <testsuite name="Dragonbase\Book module tests">
+            <directory>./DragonbaseTest</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../src</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./coverage/" charset="UTF-8" />
+    </logging>
+</phpunit>
